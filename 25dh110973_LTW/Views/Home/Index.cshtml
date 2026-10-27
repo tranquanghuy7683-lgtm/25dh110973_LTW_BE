@@ -1,0 +1,23 @@
+@{
+    ViewBag.Title = "Quản lý cửa hàng";
+}
+<div class="jumbotron">
+    <h1>QUẢN LÝ CỬA HÀNG</h1>
+    <p class="lead">Website thực hành ASP.NET MVC: tìm kiếm, sắp xếp, phân trang sản phẩm và quản lý dữ liệu.</p>
+    <p>
+        @Html.ActionLink("Quản lý sản phẩm", "Index", "Products", new { area = "Admin" }, new { @class = "btn btn-primary btn-lg" })
+        @Html.ActionLink("Quản lý danh mục", "Index", "Categories", new { area = "Admin" }, new { @class = "btn btn-success btn-lg", style = "margin-left:10px" })
+    </p>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <h2>Sản phẩm</h2>
+        <p>Tìm kiếm theo tên, mô tả hoặc danh mục; lọc theo khoảng giá; sắp xếp và phân trang kết quả.</p>
+        <p>@Html.ActionLink("Mở quản lý sản phẩm", "Index", "Products", new { area = "Admin" }, new { @class = "btn btn-default" })</p>
+    </div>
+    <div class="col-md-6">
+        <h2>Danh mục</h2>
+        <p>Thêm, xem, sửa và xóa danh mục sản phẩm.</p>
+        <p>@Html.ActionLink("Mở quản lý danh mục", "Index", "Categories", new { area = "Admin" }, new { @class = "btn btn-default" })</p>
+    </div>
+</div>
